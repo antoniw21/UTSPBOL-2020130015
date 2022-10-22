@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="472.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utspbol.pkg2020130015.FXMLlihatpengunjungController">
+   <children>
+      <Button fx:id="btnhapus" layoutX="143.0" layoutY="408.0" mnemonicParsing="false" onAction="#hapusklik" prefHeight="25.0" prefWidth="316.0" text="Hapus" />
+      <Button fx:id="btnupdate" layoutX="143.0" layoutY="368.0" mnemonicParsing="false" onAction="#updateklik" prefHeight="25.0" prefWidth="316.0" text="Update" />
+      <Button fx:id="btntambah" layoutX="143.0" layoutY="328.0" mnemonicParsing="false" onAction="#tambahklik" prefHeight="25.0" prefWidth="316.0" text="Tambah" />
+      <TableView fx:id="tbvpengunjung" layoutX="33.0" layoutY="82.0" prefHeight="200.0" prefWidth="535.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <Label layoutX="39.0" layoutY="40.0" text="Data Pengunjung" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="328.0" prefWidth="388.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="utspbol.pkg2020130015.FXMLinputpetugasController">
+   <children>
+      <Button fx:id="btnbatal" layoutX="225.0" layoutY="271.0" mnemonicParsing="false" onAction="#batalklik" text="Batal" />
+      <Button fx:id="btnsimpan" layoutX="112.0" layoutY="271.0" mnemonicParsing="false" onAction="#simpanklik" text="Simpan" />
+      <TextField fx:id="txtalamat" layoutX="170.0" layoutY="207.0" />
+      <TextField fx:id="txtumur" layoutX="170.0" layoutY="167.0" />
+      <TextField fx:id="txtnama" layoutX="170.0" layoutY="127.0" />
+      <TextField fx:id="txtpetugas" layoutX="170.0" layoutY="87.0" />
+      <Label layoutX="50.0" layoutY="212.0" text="Alamat :" />
+      <Label layoutX="50.0" layoutY="172.0" text="Umur :" />
+      <Label layoutX="50.0" layoutY="132.0" text="Nama :" />
+      <Label layoutX="50.0" layoutY="92.0" text="Id Petugas :" />
+      <Label layoutX="34.0" layoutY="34.0" text="Input Petugas" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="295.0" prefWidth="383.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="utspbol.pkg2020130015.FXMLinputhargaController">
+   <children>
+      <Button fx:id="btnbatal" layoutX="222.0" layoutY="226.0" mnemonicParsing="false" onAction="#batalklik" text="Batal" />
+      <Button fx:id="btnsimpan" layoutX="109.0" layoutY="226.0" mnemonicParsing="false" onAction="#simpanklik" text="Simpan" />
+      <TextField fx:id="txtvalet" layoutX="170.0" layoutY="167.0" />
+      <TextField fx:id="txtparkir" layoutX="170.0" layoutY="127.0" />
+      <TextField fx:id="txtkendaraan" layoutX="170.0" layoutY="87.0" />
+      <Label layoutX="50.0" layoutY="172.0" text="Valet :" />
+      <Label layoutX="50.0" layoutY="132.0" text="Parkir :" />
+      <Label layoutX="50.0" layoutY="92.0" text="Kendaraan :" />
+      <Label layoutX="34.0" layoutY="34.0" text="Input Harga" />
+   </children>
+</AnchorPane>

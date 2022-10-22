@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="472.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="utspbol.pkg2020130015.FXMLlihathargaController">
+   <children>
+      <Label layoutX="39.0" layoutY="42.0" text="Data Harga" />
+      <TableView fx:id="tbvharga" layoutX="33.0" layoutY="84.0" prefHeight="200.0" prefWidth="535.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button fx:id="btntambah" layoutX="143.0" layoutY="330.0" mnemonicParsing="false" onAction="#tambahklik" prefHeight="25.0" prefWidth="316.0" text="Tambah" />
+      <Button fx:id="btnupdate" layoutX="143.0" layoutY="370.0" mnemonicParsing="false" onAction="#updateklik" prefHeight="25.0" prefWidth="316.0" text="Update" />
+      <Button fx:id="btnhapus" layoutX="143.0" layoutY="410.0" mnemonicParsing="false" onAction="#hapusklik" prefHeight="25.0" prefWidth="316.0" text="Hapus" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utspbol.pkg2020130015.FXMLDocumentController">
+   <children>
+      <MenuBar prefWidth="500.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Input">
+            <items>
+                  <MenuItem fx:id="inputpengunjung" mnemonicParsing="false" onAction="#inputpengunjungklik" text="Pengunjung" />
+                  <MenuItem fx:id="inputpetugas" mnemonicParsing="false" onAction="#inputpetugasklik" text="Petugas" />
+              <MenuItem fx:id="inputvalet" mnemonicParsing="false" onAction="#inputvaletklik" text="Valet" />
+                  <MenuItem fx:id="inputharga" mnemonicParsing="false" onAction="#inputhargaklik" text="Harga Parkir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Data">
+            <items>
+                  <MenuItem fx:id="lihatpengunjung" mnemonicParsing="false" onAction="#lihatpengunjungklik" text="Pengunjung" />
+                  <MenuItem fx:id="lihatpetugas" mnemonicParsing="false" onAction="#lihatpetugasklik" text="Petugas" />
+              <MenuItem fx:id="lihatvalet" mnemonicParsing="false" onAction="#lihatvaletklik" text="Valet" />
+                  <MenuItem fx:id="lihatharga" mnemonicParsing="false" onAction="#lihathargaklik" text="Harga Parkir" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Parkir">
+              <items>
+                  <MenuItem fx:id="lihattransaksi" mnemonicParsing="false" onAction="#lihattransaksiklik" text="Transaksi" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="tentang" mnemonicParsing="false" onAction="#tentangklik" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
