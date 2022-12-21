@@ -49,6 +49,46 @@ public class DBHarga {
             return null;
         }
     }
+    
+    public double getBiaya(String kendaraan) {
+        double biaya = 0;
+        try {
+            Koneksi con = new Koneksi();
+            con.bukaKoneksi();
+            con.statement = con.dbKoneksi.createStatement();
+            ResultSet rs = con.statement.executeQuery("Select parkir from harga where kendaraan = '"+kendaraan+"'");
+            int i = 1;
+            while (rs.next()) {
+                biaya = rs.getDouble("parkir");
+                i++;
+            }
+            
+            con.tutupKoneksi();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return biaya;
+    }
+    
+    public double getValet(String kendaraan) {
+        double valet = 0;
+        try {
+            Koneksi con = new Koneksi();
+            con.bukaKoneksi();
+            con.statement = con.dbKoneksi.createStatement();
+            ResultSet rs = con.statement.executeQuery("Select valet from harga where kendaraan = '"+kendaraan+"'");
+            int i = 1;
+            while (rs.next()) {
+                valet = rs.getDouble("valet");
+                i++;
+            }
+            
+            con.tutupKoneksi();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return valet;
+    }
 
     public int validasi(String nomor) {
         int val = 0;

@@ -52,8 +52,31 @@ public class DBTransaksi {
             e.printStackTrace();
             return null;
         }
-    }
+    }//how to insert mysql date time to db
     
+//    public boolean insert() {
+//        boolean berhasil = false;
+//        Koneksi con = new Koneksi();
+//        try {
+//            con.bukaKoneksi();
+//            con.preparedStatement = con.dbKoneksi.prepareStatement("insert into transaksi (notiket,plat,kendaraan,idpetugas,idvalet,masuk,keluar) values (?,?,?,?,?,?,?)");
+//            con.preparedStatement.setString(1, getTransaksiModel().getNotiket());
+//            con.preparedStatement.setString(2, getTransaksiModel().getPlat());
+//            con.preparedStatement.setString(3, getTransaksiModel().getKendaraan());
+//            con.preparedStatement.setString(4, getTransaksiModel().getIdpetugas());
+//            con.preparedStatement.setString(5, getTransaksiModel().getIdvalet());
+//            con.preparedStatement.setDate(6, getTransaksiModel().getMasuk());
+//            con.preparedStatement.setString(7, getTransaksiModel().getKeluar());
+//            con.preparedStatement.executeUpdate();
+//            berhasil = true;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            berhasil = false;
+//        } finally {
+//            con.tutupKoneksi();
+//            return berhasil;
+//        }
+//    }
     
     public ObservableList<TransaksiModel> CariTransaksi(String kode) {
         try {

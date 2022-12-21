@@ -82,6 +82,11 @@ public class FXMLBuatTransaksiController implements Initializable {
 
     @FXML
     private void buattransaksiklik(ActionEvent event) {
+        double biaya = FXMLDocumentController.dtharga.getBiaya(txtkendaraan.getText());
+        double valet = FXMLDocumentController.dtharga.getValet(txtkendaraan.getText());
+//        if (txtkendaraan.getText().equalsIgnoreCase(FXMLDocumentController.dtharga.getHargaModel().getKendaraan())) {
+//            biaya = FXMLDocumentController.dtharga.getHargaModel().getParkir();
+//        }
         
         SimpleDateFormat tgl = new SimpleDateFormat("yyyy-MM-dd"); //"dd-MM-yyyy"
         SimpleDateFormat wkt = new SimpleDateFormat("HH:mm:ss");
@@ -94,13 +99,25 @@ public class FXMLBuatTransaksiController implements Initializable {
             e.printStackTrace();
         }
         long stgl = Math.round((dt.getTglkeluar().getTime() - dt.getTglmasuk().getTime()) / (1000 * 60 * 60 * 24));
-        long swkt = Math.round((dt.getWktkeluar().getTime() - dt.getWktkeluar().getTime()) / 1000);
+        long swkt = Math.round((dt.getWktkeluar().getTime() - dt.getWktmasuk().getTime()) / 1000);
+        long jam = swkt/3600;
+        
+        if (chbvalet.isSelected()) {
+            
+        } else {
+            valet = 0;
+        }
+        
+        double totalbiaya = biaya * (24 * stgl + jam);
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "No tiket: " + txttiket.getText() + "\n\n" +
                 "No Polisi / Plat: " + txtplat.getText() + "\n\n" +
                 "Kendaraan: " + txtkendaraan.getText() + "\n\n" +
                 "Id Petugas: " + txtpetugas.getText() + "\n\n" + 
-                "Id Valet: " + txtvalet.getText() + "\n\n" +
-                "Durasi Parkir: " + stgl + "hari " + swkt + "jam");
+                "Id Valet: " + (chbvalet.isSelected()? txtvalet.getText() : "-") + "\n\n" +
+                "Durasi Parkir: " + stgl + "hari " + swkt + "jam" + "\n\n" + 
+                        "Biaya Valet: " + valet + "\n\n" +
+                "Biaya Per jam parkir: " + biaya + "\n\n" +
+                "Total Biaya parkir: " + totalbiaya);
         alert.setHeaderText("Berhasil melakukan Transaksi");
         alert.showAndWait();
 
