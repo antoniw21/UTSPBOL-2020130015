@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utspbol.pkg2020130015.FXMLBuatTransaksiController">
+   <children>
+      <Label layoutX="63.0" layoutY="22.0" text="Transaksi Baru">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="73.0" text="No. Tiket" />
+      <Label layoutX="45.0" layoutY="112.0" text="No. Polisi / Plat" />
+      <Label layoutX="45.0" layoutY="153.0" text="Kendaraan " />
+      <Label layoutX="45.0" layoutY="193.0" text="Id Petugas " />
+      <CheckBox fx:id="chbvalet" layoutX="45.0" layoutY="233.0" mnemonicParsing="false" onAction="#usevalet" text="Valet" />
+      <Label layoutX="151.0" layoutY="235.0" text="Id Valet" />
+      <Label layoutX="45.0" layoutY="279.0" text="Tanggal Masuk Parkir" />
+      <Label layoutX="46.0" layoutY="320.0" text="Tanggal Keluar Parkir" />
+      <Button fx:id="btnbuattransaksi" layoutX="180.0" layoutY="465.0" mnemonicParsing="false" onAction="#buattransaksiklik" prefHeight="25.0" prefWidth="142.0" text="Buat Transaksi" />
+      <TextField fx:id="txttiket" layoutX="250.0" layoutY="66.0" />
+      <TextField fx:id="txtplat" layoutX="250.0" layoutY="105.0" />
+      <TextField fx:id="txtkendaraan" layoutX="250.0" layoutY="146.0" />
+      <TextField fx:id="txtpetugas" layoutX="250.0" layoutY="186.0" />
+      <TextField fx:id="txtvalet" layoutX="250.0" layoutY="230.0" />
+      <Label layoutX="210.0" layoutY="71.0" text="   :   " />
+      <Label layoutX="210.0" layoutY="112.0" text="   :   " />
+      <Label layoutX="210.0" layoutY="153.0" text="   :   " />
+      <Label layoutX="210.0" layoutY="193.0" text="   :   " />
+      <Label layoutX="210.0" layoutY="235.0" text="   :   " />
+      <Label layoutX="210.0" layoutY="279.0" text="   :   " />
+      <Label layoutX="210.0" layoutY="320.0" text="   :   " />
+      <DatePicker fx:id="dtmasuk" layoutX="250.0" layoutY="274.0" />
+      <DatePicker fx:id="dtkeluar" layoutX="250.0" layoutY="315.0" />
+      <Button fx:id="btncariplat" layoutX="459.0" layoutY="107.0" mnemonicParsing="false" onAction="#cariplatklik" prefHeight="25.0" prefWidth="101.0" text="Cari Plat" />
+      <Button fx:id="btncaripetugas" layoutX="459.0" layoutY="188.0" mnemonicParsing="false" onAction="#caripetugasklik" text="Cari Petugas" />
+      <Button fx:id="btncarivalet" layoutX="459.0" layoutY="230.0" mnemonicParsing="false" onAction="#carivaletklik" prefHeight="25.0" prefWidth="101.0" text="Cari Valet" />
+      <Label layoutX="210.0" layoutY="363.0" text="   :   " />
+      <TextField fx:id="txtwaktumasuk" layoutX="250.0" layoutY="356.0" />
+      <Label layoutX="45.0" layoutY="363.0" text="Waktu Masuk (hh:mm:ss)" />
+      <Label layoutX="45.0" layoutY="405.0" text="Waktu Keluar (hh:mm:ss)" />
+      <TextField fx:id="txtwaktukeluar" layoutX="250.0" layoutY="398.0" />
+      <Label layoutX="210.0" layoutY="405.0" text="   :   " />
+      <Button fx:id="btnhapus" layoutX="336.0" layoutY="465.0" mnemonicParsing="false" onAction="#hapusklik" prefHeight="25.0" prefWidth="142.0" text="Hapus" />
+   </children>
+</AnchorPane>

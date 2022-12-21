@@ -35,6 +35,7 @@
             <Menu mnemonicParsing="false" text="Parkir">
               <items>
                   <MenuItem fx:id="lihattransaksi" mnemonicParsing="false" onAction="#lihattransaksiklik" text="Transaksi" />
+                  <MenuItem fx:id="buattransaksi" mnemonicParsing="false" onAction="#buattransaksiklik" text="Buat Transaksi" />
               </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Help">

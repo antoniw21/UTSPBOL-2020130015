@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="359.0" prefWidth="513.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="utspbol.pkg2020130015.FXMLPilihPlatController">
+   <children>
+      <TextField fx:id="txtcari" layoutX="196.0" layoutY="52.0" prefHeight="25.0" prefWidth="187.0" />
+      <Button fx:id="btncari" layoutX="405.0" layoutY="52.0" mnemonicParsing="false" onAction="#cariklik" prefWidth="55.0" text="Cari" />
+      <Button fx:id="btnbatal" layoutX="405.0" layoutY="312.0" mnemonicParsing="false" onAction="#batalklik" prefWidth="55.0" text="Batal" />
+      <Button fx:id="btnpilih" layoutX="326.0" layoutY="312.0" mnemonicParsing="false" onAction="#pilihklik" prefWidth="55.0" text="Pilih" />
+      <ComboBox fx:id="cbpilih" layoutX="27.0" layoutY="52.0" prefWidth="150.0" />
+      <TableView fx:id="tbvplat" layoutX="27.0" layoutY="87.0" prefHeight="200.0" prefWidth="443.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <Label layoutX="27.0" layoutY="29.0" text="Pilih No. Polisi / Plat" />
+   </children>
+</AnchorPane>

@@ -6,6 +6,7 @@ package utspbol.pkg2020130015;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -123,6 +124,32 @@ public class DBValet {
         } finally {
             con.tutupKoneksi();
             return berhasil;
+        }
+    }
+    
+    public ObservableList<ValetModel> CariValet(String kode, String nama) {
+        try {
+            ObservableList<ValetModel> tableData;
+            tableData = FXCollections.observableArrayList();
+            Koneksi con = new Koneksi();
+            con.bukaKoneksi();
+            con.statement = (Statement) con.dbKoneksi.createStatement();
+            ResultSet rs = (ResultSet) con.statement.executeQuery("select * from valet WHERE idvalet LIKE '" + kode + "%' OR nama LIKE '" + nama + "%'");
+            int i = 1;
+            while (rs.next()) {
+                ValetModel d = new ValetModel();
+                d.setIdvalet(rs.getString("idvalet"));
+                d.setNama(rs.getString("nama"));
+                d.setUmur(rs.getInt("Umur"));
+                d.setAlamat(rs.getString("alamat"));
+                tableData.add(d);
+                i++;
+            }
+            con.tutupKoneksi();
+            return tableData;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
 }

@@ -51,6 +51,8 @@ public class FXMLDocumentController implements Initializable {
     private MenuItem inputharga;
     @FXML
     private MenuItem lihatharga;
+    @FXML
+    private MenuItem buattransaksi;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -195,6 +197,19 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void tentangklik(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLAbout.fxml"));
+            Parent root = (Parent) loader.load();
+            Scene scene = new Scene(root);
+            Stage stg = new Stage();
+            stg.initModality(Modality.APPLICATION_MODAL);
+            stg.setResizable(false);
+            stg.setIconified(false);
+            stg.setScene(scene);
+            stg.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -213,5 +228,23 @@ public class FXMLDocumentController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void buattransaksiklik(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLBuatTransaksi.fxml"));
+            Parent root = (Parent) loader.load();
+            Scene scene = new Scene(root);
+            Stage stg = new Stage();
+            stg.initModality(Modality.APPLICATION_MODAL);
+            stg.setResizable(false);
+            stg.setIconified(false);
+            stg.setScene(scene);
+            stg.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }

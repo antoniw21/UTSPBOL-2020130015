@@ -6,6 +6,7 @@ package utspbol.pkg2020130015;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -53,4 +54,33 @@ public class DBTransaksi {
         }
     }
     
+    
+    public ObservableList<TransaksiModel> CariTransaksi(String kode) {
+        try {
+            ObservableList<TransaksiModel> tableData;
+            tableData = FXCollections.observableArrayList();
+            Koneksi con = new Koneksi();
+            con.bukaKoneksi();
+            con.statement = (Statement) con.dbKoneksi.createStatement();
+            ResultSet rs = (ResultSet) con.statement.executeQuery("select notiket, plat, kendaraan, idpetugas, idvalet, masuk, keluar from transaksi WHERE notiket LIKE '" + kode + "%'");
+            int i = 1;
+            while (rs.next()) {
+                TransaksiModel d = new TransaksiModel();
+                d.setNotiket(rs.getString("notiket"));
+                d.setPlat(rs.getString("plat"));
+                d.setKendaraan(rs.getString("kendaraan"));
+                d.setIdpetugas(rs.getString("idpetugas"));
+                d.setIdvalet(rs.getString("idvalet"));
+                d.setMasuk(rs.getString("masuk"));
+                d.setKeluar(rs.getString("keluar"));
+                tableData.add(d);
+                i++;
+            }
+            con.tutupKoneksi();
+            return tableData;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
